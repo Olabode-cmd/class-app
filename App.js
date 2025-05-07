@@ -1,7 +1,9 @@
-import { View, Text, StyleSheet, Pressable, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, Pressable, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { useState } from 'react';
 import ProfilePicture from './assets/view.jpeg'
 import Dots from './assets/dots.svg'
+import RedBox from './components/redbox';
+import Usercard from './components/usercard';
 
 const App = () => {
   // useState Lesson
@@ -41,46 +43,50 @@ const App = () => {
     }
   ]
   return (
-    <View style={styles.container}>
-     <Text style={styles.header}>My Profile</Text>
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.header}>My Profile</Text>
 
-     <View style={styles.banner}>
-        <View style={styles.profile}>
-          <Image source={ProfilePicture} style={styles.image} />
-          <View style={{ marginLeft: 16 }}>
-            <Text style={styles.bigtext}>Matthew Joe</Text>
-            <Text style={styles.smallertext}>4 years of experience</Text>
+        <View style={styles.banner}>
+          <View style={styles.profile}>
+            <Image source={ProfilePicture} style={styles.image} />
+            <View style={{ marginLeft: 16 }}>
+              <Text style={styles.bigtext}>Matthew Joe</Text>
+              <Text style={styles.smallertext}>4 years of experience</Text>
+            </View>
           </View>
-        </View>
 
-        <View style={styles.buttons}>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{ color: "white", textAlign: "center", fontSize: 18}}>Download CV</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{ color: "white", textAlign: "center", fontSize: 18}}>Contact</Text>
-          </TouchableOpacity>
-        </View>
+          <View style={styles.buttons}>
+            <TouchableOpacity style={styles.button}>
+              <Text style={{ color: "white", textAlign: "center", fontSize: 18 }}>Download CV</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button}>
+              <Text style={{ color: "white", textAlign: "center", fontSize: 18 }}>Contact</Text>
+            </TouchableOpacity>
+          </View>
 
-        <View style={{ marginTop: 20, marginBottom: 20 }}>
-          <Text style={{ fontSize: 28 }}>About</Text>
-          <Text style={{ marginTop: 6, fontSize: 20, color: "#666"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
-        </View>
+          <View style={{ marginTop: 20, marginBottom: 20 }}>
+            <Text style={{ fontSize: 28 }}>About</Text>
+            <Text style={{ marginTop: 6, fontSize: 20, color: "#666" }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
+          </View>
 
-        {workExperience.map((item) => (
-          <View style={styles.workCard}>
+          {workExperience.map((item) => (
+            <View style={styles.workCard}>
               <View>
                 <Text>{item.companyName}</Text>
                 <Text>{item.duration}</Text>
                 <Text>{item.position}</Text>
               </View>
               <View>
-                <Image source={Dots} style={{ width: 20, height: 20}} />
+                <Image source={Dots} style={{ width: 20, height: 20 }} />
               </View>
-          </View>
-        ))}
-     </View>
-    </View>
+            </View>
+          ))}
+        </View>
+
+        <Usercard />
+      </View>
+    </ScrollView>
   )
 }
 

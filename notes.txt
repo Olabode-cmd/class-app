@@ -1,0 +1,5 @@
+Components
+
+A component is a reusable piece of code that contains a specific 
+functionality or UI element. Components can be used to build complex UIs 
+by combining smaller, reusable components.
