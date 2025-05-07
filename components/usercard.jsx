@@ -1,15 +1,15 @@
 import { View, Text, Image, StyleSheet } from 'react-native'
 
-const Usercard = () => {
+const Usercard = (props) => {
     return (
         <View style={styles.wrapper}>
             <Image
                 source={require('../assets/view.jpeg')}
                 style={styles.image} // style={{ width: 100, height: 100 }}
             />
-            <Text style={styles.title}>Lorem ipsum dolor sit</Text>
+            <Text style={styles.title}>{props.title}</Text>
 
-            <Text style={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quisquam deleniti voluptatibus nulla!</Text>
+            <Text style={styles.subtitle}>{props.subtitle}</Text>
         </View>
     )
 }
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     wrapper: {
         width: '70%',
         height: 400,
-        marginBottom: 30,
+        marginBottom: 10,
     },
     image: {
         width: '100%',

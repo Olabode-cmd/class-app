@@ -84,7 +84,8 @@ const App = () => {
           ))}
         </View>
 
-        <Usercard />
+        <Usercard title="Person 1 title" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lectus nisl, mattis vitae ullamcorper quis, condimentum et nisl. Quisque at pellentesque purus. Nulla sed vestibulum lectus, at ultricies" />
+        <Usercard title="Person 2 title and subtitle" subtitle="Etiam a felis in nulla malesuada porta. Nullam non vestibulum erat. Vestibulum feugiat quis tortor sed aliquam. Donec malesuada facilisis consequat. Fusce vel sem non magna hendrerit dictum. Nulla eu quam vitae justo facilisis egestas hendrerit eget arcu. Donec eu erat vestibulum, ullamcorper nibh et" />
       </View>
     </ScrollView>
   )
