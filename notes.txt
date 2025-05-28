@@ -3,3 +3,57 @@ Components
 A component is a reusable piece of code that contains a specific 
 functionality or UI element. Components can be used to build complex UIs 
 by combining smaller, reusable components.
+
+Props 
+
+
+
+
+
+
+
+APIs
+
+There are primarily 5 API methods.
+
+GET - to fetch data
+POST - to create data
+PUT - to update data by sending the whole object again
+PATCH - to update data by sending onl the snippet to be changed
+DELETE - to delete data
+
+post add new student
+
+const formData = {
+    name: "Balogun Abe",
+    age: 16,
+    class: "JSS2",
+
+}
+
+// GET REQUEST
+{
+      "id": 1,
+      "title": "Essence Mascara Lash Princess",
+      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      "category": "beauty",
+      "price": 9.99,
+      "discountPercentage": 10.48,
+      "rating": 2.56,
+}
+
+// POST REQUEST
+
+{
+    title: "Bone straight Wig",
+    description: "lorem23",
+    category: "hair",
+    price: 20,
+    discountPercentage: 17.59,
+    rating: 2.56
+}
+
+// PATCH
+{
+    category: "beauty"
+}
